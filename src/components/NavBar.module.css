@@ -1,0 +1,95 @@
+.background,
+.backgroundDegrade {
+  width: 1440px;
+  position: relative;
+  display: none;
+  max-width: 100%;
+}
+.backgroundDegrade {
+  height: 65px;
+  background: linear-gradient(90deg, #262526 50%, #f3f7f7);
+}
+.background {
+  height: 64px;
+  background-color: var(--color-black);
+}
+.logoIcon {
+  height: 57.6px;
+  width: 63px;
+  position: relative;
+  object-fit: cover;
+  z-index: 2;
+}
+.aPropos {
+  white-space: nowrap;
+}
+.aPropos,
+.contact,
+.service {
+  text-decoration: none;
+  width: 70px;
+  position: relative;
+  color: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.aboutServicesContactMenu {
+  margin: 0;
+  width: 290px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  text-align: left;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+.boutonWrapper,
+.navBar,
+.navbarMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.navbarMenu {
+  margin: 0;
+  width: 1005px;
+  padding: 0 0 var(--padding-xl-6);
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.boutonWrapper,
+.navBar {
+  padding: 0 0 var(--padding-2xs-6);
+}
+.navBar {
+  background-color: var(--color-black);
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) var(--padding-46xl) var(--padding-8xs-4)
+    var(--padding-53xl);
+  box-sizing: border-box;
+  gap: var(--gap-26xl);
+  top: 0;
+  z-index: 99;
+  position: sticky;
+  max-width: 100%;
+}
+@media screen and (max-width: 1225px) {
+  .navbarMenu {
+    display: none;
+  }
+}
+@media screen and (max-width: 750px) {
+  .navBar {
+    gap: var(--gap-3xl);
+    padding-left: var(--padding-17xl);
+    padding-right: var(--padding-13xl);
+    box-sizing: border-box;
+  }
+}

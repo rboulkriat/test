@@ -1,0 +1,24 @@
+.prendreRendezVous {
+  position: relative;
+}
+.bouton {
+  box-shadow: 5px 7px 10px #000;
+  border-radius: var(--br-81xl);
+  background: linear-gradient(90deg, #393739 50%, #6a6c6c);
+  border: 1px solid var(--color-black);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-7xs);
+  white-space: nowrap;
+  text-align: left;
+  font-size: var(--font-size-sm);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .bouton {
+    gap: var(--gap-131xl);
+  }
+}
