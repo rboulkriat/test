@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
 import styles from "./Bouton.module.css";
 
 export type BoutonType = {
@@ -7,11 +8,11 @@ export type BoutonType = {
 
 const Bouton: FunctionComponent<BoutonType> = ({ className = "" }) => {
   return (
-    <div className={[styles.bouton, className].join(" ")}>
+    <Link to="/Decouvrir" className={[styles.bouton, className].join(" ")}>
       <b className={styles.prendreRendezVous}>
         Découvrez nos créations de sites web
       </b>
-    </div>
+    </Link>
   );
 };
 

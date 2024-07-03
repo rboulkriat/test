@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import Acceuil from "./pages/Acceuil";
+import Decouvrir from "./pages/decouvrir"; // Assurez-vous que le chemin et le nom du fichier sont corrects
 
 function App() {
   const action = useNavigationType();
@@ -24,9 +25,17 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
+        title = "Accueil";
+        metaDescription = "Bienvenue sur notre site.";
         break;
+      case "/Decouvrir":
+        title = "Découvrir";
+        metaDescription = "Découvrez nos services.";
+        break;
+      // Ajoutez d'autres cas si nécessaire
+      default:
+        title = "Mon site";
+        metaDescription = "Description de mon site.";
     }
 
     if (title) {
@@ -46,7 +55,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Acceuil />} />
+      <Route path="/Decouvrir" element={<Decouvrir />} /> {/* Ajout de la route Decouvrir */}
     </Routes>
   );
 }
+
 export default App;

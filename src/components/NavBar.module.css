@@ -1,3 +1,4 @@
+/* Styles existants */
 .background,
 .backgroundDegrade {
   width: 1440px;
@@ -80,16 +81,38 @@
   position: sticky;
   max-width: 100%;
 }
+
+/* Nouveaux styles */
+.burgerButton {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: var(--color-white);
+  cursor: pointer;
+  z-index: 3;
+}
+
 @media screen and (max-width: 1225px) {
   .navbarMenu {
     display: none;
+    position: absolute;
+    top: 64px; /* Ajustez en fonction de la hauteur de votre navbar */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-black);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 2;
+    padding: var(--padding-10xs) 0; /* Ajoutez un padding pour séparer les éléments */
+  }
+
+  .burgerButton {
+    display: block;
   }
 }
-@media screen and (max-width: 750px) {
-  .navBar {
-    gap: var(--gap-3xl);
-    padding-left: var(--padding-17xl);
-    padding-right: var(--padding-13xl);
-    box-sizing: border-box;
-  }
+
+.showMenu {
+  display: flex !important;
 }

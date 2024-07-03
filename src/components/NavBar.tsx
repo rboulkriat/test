@@ -1,5 +1,4 @@
-import { FunctionComponent } from "react";
-import Bouton1 from "./Bouton1";
+import { FunctionComponent, useState } from "react";
 import styles from "./NavBar.module.css";
 
 export type NavBarType = {
@@ -7,6 +6,12 @@ export type NavBarType = {
 };
 
 const NavBar: FunctionComponent<NavBarType> = ({ className = "" }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <header className={[styles.navBar, className].join(" ")}>
       <div className={styles.backgroundDegrade} />
@@ -17,16 +22,16 @@ const NavBar: FunctionComponent<NavBarType> = ({ className = "" }) => {
         alt=""
         src="/logo@2x.png"
       />
-      <nav className={styles.navbarMenu}>
+      <button className={styles.burgerButton} onClick={toggleMenu}>
+        &#9776;
+      </button>
+      <nav className={`${styles.navbarMenu} ${menuOpen ? styles.showMenu : ""}`}>
         <nav className={styles.aboutServicesContactMenu}>
           <a className={styles.aPropos}>A propos</a>
           <a className={styles.service}>Service</a>
           <a className={styles.contact}>Contact</a>
         </nav>
       </nav>
-      <div className={styles.boutonWrapper}>
-        <Bouton1 />
-      </div>
     </header>
   );
 };

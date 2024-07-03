@@ -1,3 +1,4 @@
+/* Styles existants */
 .r11 {
   align-self: stretch;
   flex: 1;
@@ -152,6 +153,35 @@
     padding-left: var(--padding-16xl);
     padding-right: var(--padding-16xl);
     box-sizing: border-box;
+  }
+  .frameGroup {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLinks, .footerLinks1, .footerLinks2 {
+    padding-top: var(--padding-10xs);
+    padding-bottom: var(--padding-10xs);
+    align-items: center;
+  }
+  .footerDividerWrapper {
+    padding-top: var(--padding-10xs);
+  }
+  .frameWrapper {
+    padding-left: var(--padding-5xl);
+    padding-right: var(--padding-5xl);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-2xs);
+  }
+  .rbcreationWrapper {
+    justify-content: center;
+    padding: 0;
+  }
+  .frameContainer {
+    align-items: center;
+  }
+  .copyrightAllRights {
+    text-align: center;
   }
 }
 @media screen and (max-width: 450px) {

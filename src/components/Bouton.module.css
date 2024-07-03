@@ -1,6 +1,8 @@
-.prendreRendezVous {
+.boutonWrapper {
   position: relative;
+  z-index: 10; /* Augmentez ce chiffre si nécessaire */
 }
+
 .bouton {
   box-shadow: 5px 7px 10px #000;
   border-radius: var(--br-81xl);
@@ -16,9 +18,12 @@
   font-size: var(--font-size-sm);
   color: var(--color-white);
   font-family: var(--font-inter);
+  position: relative;
 }
+
 @media screen and (max-width: 450px) {
   .bouton {
     gap: var(--gap-131xl);
   }
 }
+

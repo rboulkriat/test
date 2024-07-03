@@ -1,0 +1,49 @@
+.acceuil {
+    width: 100%;
+    position: relative;
+    background-color: #0b0a0a;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 0 0 63px;
+    box-sizing: border-box;
+    gap: var(--gap-29xl);
+    line-height: normal;
+    letter-spacing: normal;
+  }
+  @media screen and (max-width: 750px) {
+    .acceuil {
+      gap: var(--gap-5xl);
+    }
+  }
+  
+  .navBarParent {
+    width: 100%;
+  }
+  
+  .contentSection {
+    width: 100%;
+    max-width: 800px; /* Ajustez la largeur maximale selon vos besoins */
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left; /* Aligner le texte à gauche */
+    font-size: var(--font-size-lg);
+    color: var(--color-white); /* Texte en blanc */
+  }
+  
+  .leftAlign {
+    align-self: flex-start; /* Alignement du contenu à gauche */
+  }
+  
+  h2 {
+    font-size: var(--font-size-3xl);
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: var(--font-size-md);
+    line-height: 1.6;
+  }
+  
