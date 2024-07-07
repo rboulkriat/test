@@ -1,65 +1,75 @@
 /* Styles existants */
 .r11 {
-  align-self: stretch;
+  align-self: center; /* Centrer l'image horizontalement */
   flex: 1;
-  position: relative;
   max-width: 100%;
-  overflow: hidden;
   max-height: 100%;
   object-fit: cover;
 }
+
 .r11Wrapper {
   height: 404px;
   width: 519px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 0 var(--padding-20xl) 0 0;
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .aPropos {
   position: relative;
   display: inline-block;
   min-width: 90px;
+  text-align: center; /* Centrage du texte */
 }
+
 .footerLinks {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: var(--padding-231xl) 0 0;
 }
+
 .service {
   align-self: stretch;
   position: relative;
+  text-align: center; /* Centrage du texte */
 }
+
 .footerLinks1 {
   width: 98px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: var(--padding-231xl) var(--padding-5xs) 0 0;
   box-sizing: border-box;
 }
+
 .contact {
   align-self: stretch;
   position: relative;
+  text-align: center; /* Centrage du texte */
 }
+
 .footerLinks2,
 .frameGroup {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* Changement de flex-start à center */
 }
+
 .footerLinks2 {
   width: 90px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   padding: var(--padding-231xl) 0 0;
   box-sizing: border-box;
 }
+
 .frameGroup {
   width: 1190px;
   flex-direction: row;
@@ -67,71 +77,85 @@
   max-width: 100%;
   gap: var(--gap-xl);
 }
+
 .footerDivider,
 .footerDividerWrapper {
   align-self: stretch;
   box-sizing: border-box;
   max-width: 100%;
 }
+
 .footerDivider {
   flex: 1;
   position: relative;
   border-top: 1px solid var(--color-white);
 }
+
 .footerDividerWrapper {
   height: 39px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 0 0 var(--padding-19xl);
 }
+
 .rbcreation {
   position: relative;
   font-weight: 500;
   display: inline-block;
   min-width: 118px;
+  text-align: center; /* Centrage du texte */
 }
+
 .rbcreationWrapper {
   align-self: stretch;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   padding: 0 var(--padding-10xl) 0 var(--padding-xl);
 }
+
 .copyrightAllRights {
   position: relative;
+  text-align: center; /* Centrage du texte */
 }
+
 .frameContainer,
 .frameWrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
+
 .frameContainer {
   width: 313px;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--gap-2xl);
 }
+
 .frameWrapper {
   align-self: stretch;
   flex-direction: row;
   justify-content: center;
   padding: 0 var(--padding-xl) 0 var(--padding-14xl);
 }
+
 .footer,
 .frameParent {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   max-width: 100%;
 }
+
 .frameParent {
   flex: 1;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--gap-3xs);
 }
+
 .footer {
   align-self: stretch;
   flex-direction: row;
@@ -143,11 +167,13 @@
   color: var(--color-white);
   font-family: var(--font-inter);
 }
+
 @media screen and (max-width: 1050px) {
   .frameGroup {
     flex-wrap: wrap;
   }
 }
+
 @media screen and (max-width: 750px) {
   .footer {
     padding-left: var(--padding-16xl);
@@ -158,7 +184,9 @@
     flex-direction: column;
     align-items: center;
   }
-  .footerLinks, .footerLinks1, .footerLinks2 {
+  .footerLinks,
+  .footerLinks1,
+  .footerLinks2 {
     padding-top: var(--padding-10xs);
     padding-bottom: var(--padding-10xs);
     align-items: center;
@@ -184,6 +212,7 @@
     text-align: center;
   }
 }
+
 @media screen and (max-width: 450px) {
   .aPropos,
   .contact,
@@ -191,5 +220,16 @@
   .rbcreation,
   .service {
     font-size: var(--font-size-base);
+  }
+  .r11 {
+    width: 100%; /* Assurez-vous que l'image ne dépasse pas l'écran */
+    height: auto; /* Permet à l'image de s'ajuster proportionnellement */
+  }
+  .r11Wrapper {
+    height: auto; /* Permet au conteneur de s'ajuster à l'image */
+    width: 100%; /* S'assure que le conteneur prend toute la largeur de l'écran */
+    align-items: center; /* Centrer le contenu */
+    justify-content: center; /* Centrer le contenu */
+    padding: var(--padding-10xs); /* Ajoute du padding pour l'espace */
   }
 }

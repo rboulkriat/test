@@ -1,12 +1,8 @@
-import { useEffect } from "react";
-import {
-  Routes,
-  Route,
-  useNavigationType,
-  useLocation,
-} from "react-router-dom";
+import React, { useEffect } from "react";
+import { Routes, Route, useNavigationType, useLocation, useParams } from "react-router-dom";
 import Acceuil from "./pages/Acceuil";
-import Decouvrir from "./pages/decouvrir"; // Assurez-vous que le chemin et le nom du fichier sont corrects
+import Decouvrir from "./pages/decouvrir";
+import Details from "./components/details";
 
 function App() {
   const action = useNavigationType();
@@ -32,6 +28,10 @@ function App() {
         title = "Découvrir";
         metaDescription = "Découvrez nos services.";
         break;
+      case "/Details":
+        title = "Details";
+        metaDescription = "Découvrez nos services en détails.";
+        break;
       // Ajoutez d'autres cas si nécessaire
       default:
         title = "Mon site";
@@ -55,9 +55,17 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Acceuil />} />
-      <Route path="/Decouvrir" element={<Decouvrir />} /> {/* Ajout de la route Decouvrir */}
+      <Route path="/Decouvrir" element={<Decouvrir />} />
+      <Route path="/Decouvrir/:productName" element={<DetailsWrapper />} />
     </Routes>
   );
 }
+
+// Component DetailsWrapper qui rend directement Details avec les paramètres nécessaires
+const DetailsWrapper = () => {
+  const { productName } = useParams<{ productName: string }>();
+
+  return <Details productName={productName} />;
+};
 
 export default App;

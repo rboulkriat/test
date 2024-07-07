@@ -1,5 +1,6 @@
 import { FunctionComponent, useState } from "react";
 import styles from "./NavBar.module.css";
+import { Link } from "react-router-dom";
 
 export type NavBarType = {
   className?: string;
@@ -16,12 +17,14 @@ const NavBar: FunctionComponent<NavBarType> = ({ className = "" }) => {
     <header className={[styles.navBar, className].join(" ")}>
       <div className={styles.backgroundDegrade} />
       <div className={styles.background} />
-      <img
-        className={styles.logoIcon}
-        loading="lazy"
-        alt=""
-        src="/logo@2x.png"
-      />
+      <Link to="/" className={[styles.logoIcon, className].join(" ")}>
+        <img
+          className={styles.logoIcon}
+          loading="lazy"
+          alt="Logo rbcreation"
+          src="/logo@2x.png"
+        />
+       </Link>
       <button className={styles.burgerButton} onClick={toggleMenu}>
         &#9776;
       </button>
@@ -32,6 +35,14 @@ const NavBar: FunctionComponent<NavBarType> = ({ className = "" }) => {
           <a className={styles.contact}>Contact</a>
         </nav>
       </nav>
+      <div className={styles.cart}>
+        <img
+          className={styles.shoppingBagIcon}
+          loading="lazy"
+          alt=""
+          src="/shopping-bag.svg"
+        />
+      </div>
     </header>
   );
 };

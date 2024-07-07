@@ -13,6 +13,7 @@ const Acceuil: FunctionComponent = () => {
         <GroupComponent />
       </section>
       <FrameComponent />
+      <br></br>
       <section className={styles.graphiqueAnalyseSwotMinimalWrapper}>
         <img
           className={styles.graphiqueAnalyseSwotMinimal}

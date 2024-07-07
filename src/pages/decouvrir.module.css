@@ -1,49 +1,152 @@
-.acceuil {
-    width: 100%;
-    position: relative;
-    background-color: #0b0a0a;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 0 0 63px;
+.blankLine,
+.blankLine1,
+.explorezNosServices,
+.nosServicesIncluent {
+  margin: 0;
+}
+.avecNotreExpertiseEtNotre {
+  margin: 0;
+  font-size: 18px;
+}
+.explorezNosServicesContainer {
+  flex: 1;
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+.explorezNosServicesCompletsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 100px 2px;
+}
+.explorezNosServicesCompletsWrapper,
+.separator,
+.separatorChild {
+  align-self: stretch;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.separatorChild {
+  flex: 1;
+  position: relative;
+  border-top: 1px solid var(--color-white);
+}
+.separator {
+  height: 49px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 48px;
+}
+.rbcreation {
+  position: relative;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 118px;
+}
+.rights {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 29px 0 var(--padding-xl);
+}
+.copyrightAllRights {
+  position: relative;
+}
+.rightsParent {
+  width: 313px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-2xl);
+}
+.copyright,
+.hero,
+.rightsParent {
+  display: flex;
+  align-items: flex-start;
+}
+.copyright {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 var(--padding-xl) 0 var(--padding-12xl);
+  font-size: var(--font-size-xl);
+  font-family: var(--font-inter);
+}
+.hero {
+  flex: 1;
+  flex-direction: column;
+  justify-content: center; /* Modifier pour centrer verticalement */
+  align-items: center; /* Modifier pour centrer horizontalement */
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-base);
+  color: var(--color-white);
+  font-family: var(--font-inria-serif);
+}
+.content,
+.decouvrir {
+  display: flex;
+  box-sizing: border-box;
+}
+.content {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 68px 0 70px;
+  max-width: 100%;
+}
+.decouvrir {
+  width: 100%;
+  position: relative;
+  background-color: #0b0a0a;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 0 0 59px;
+  gap: 64px;
+  line-height: normal;
+  letter-spacing: normal;
+}
+@media screen and (max-width: 975px) {
+  .content {
+    padding-left: 35px;
+    padding-right: var(--padding-15xl);
     box-sizing: border-box;
-    gap: var(--gap-29xl);
-    line-height: normal;
-    letter-spacing: normal;
   }
-  @media screen and (max-width: 750px) {
-    .acceuil {
-      gap: var(--gap-5xl);
-    }
+  .decouvrir {
+    gap: 32px;
   }
-  
-  .navBarParent {
-    width: 100%;
+}
+@media screen and (max-width: 450px) {
+  .copyrightAllRights,
+  .rbcreation {
+    font-size: var(--font-size-base);
   }
-  
-  .contentSection {
-    width: 100%;
-    max-width: 800px; /* Ajustez la largeur maximale selon vos besoins */
-    padding: 20px;
-    box-sizing: border-box;
-    text-align: left; /* Aligner le texte à gauche */
-    font-size: var(--font-size-lg);
-    color: var(--color-white); /* Texte en blanc */
+  .decouvrir {
+    gap: var(--gap-base);
   }
-  
-  .leftAlign {
-    align-self: flex-start; /* Alignement du contenu à gauche */
-  }
-  
-  h2 {
-    font-size: var(--font-size-3xl);
-    margin-bottom: 20px;
-  }
-  
-  p {
-    font-size: var(--font-size-md);
-    line-height: 1.6;
-  }
-  
+}
+.servicesContainer {
+  display: flex;
+  flex-direction: column; /* Affiche les éléments en colonne */
+  align-items: center; /* Centre les éléments horizontalement */
+  justify-content: center; /* Centre les éléments verticalement */
+  gap: 20px; /* Espace entre les ServicesPreview */
+}
+
+.serviceLink {
+  text-decoration: none; /* Supprime le soulignement du lien */
+}
+
+/* Styles existants pour d'autres éléments */
+
+
+
